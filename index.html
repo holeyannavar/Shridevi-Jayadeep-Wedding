@@ -154,6 +154,11 @@ section{position:relative;padding:70px 22px;text-align:center}
 .rcard .crn.tl{top:-28px;left:-28px}.rcard .crn.br{bottom:-28px;right:-28px}
 .rcard.in .crn{opacity:1;transform:scale(1) rotate(0)}
 .rcard.in .crn.br{transform:scale(1) rotate(180deg)}
+.rcard.engage{background:radial-gradient(circle at 50% 30%,#fffaf0,#f6e7c4 50%,#e2c588);color:var(--wine);box-shadow:0 24px 40px rgba(140,106,44,.3),inset 0 0 0 8px #fbf1dc,inset 0 0 0 9px var(--wine)}
+.rcard.engage .eyebrow{color:#8d6a2c}
+.rcard.engage h2{color:var(--wine)}
+.rcard.engage p{color:#5a1726}
+.rcard.engage .spark{background:var(--wine);opacity:.6}
 .spark{position:absolute;width:6px;height:6px;background:var(--gold2);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);animation:tw 2.4s ease-in-out infinite}
 @keyframes tw{0%,100%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1.4)}}
 
@@ -282,11 +287,11 @@ section{position:relative;padding:70px 22px;text-align:center}
   <div class="swipeHint">← swipe →</div>
  </section>
 
- <section id="reception">
-  <div class="rcard rv" id="rcard">
+ <section id="ring">
+  <div class="rcard engage rv" id="ringCard">
    <img class="crn tl roseImg" alt=""><img class="crn br roseImg" alt="">
-   <div class="eyebrow">Sunday · 12 December 2026</div>
-   <h2 class="gold-text">Wedding Reception</h2>
+   <div class="eyebrow">Saturday · 12 December 2026</div>
+   <h2>Ring Ceremony</h2>
    <svg width="120" height="14"><use href="#flourish"/></svg>
    <p style="margin-top:14px">Sugar, Photos &amp; Dinner<br>8:00 PM onwards<br>Hebsur Bhavan, Hubballi<br><span style="opacity:.8">Dress code: Indo-western</span></p>
   </div>
@@ -553,7 +558,7 @@ function buildCarousels(){
 
 /* ---------- reception sparkles, map, copy ---------- */
 function misc(){
- const rc=$("#rcard");for(let i=0;i<16;i++){const s=document.createElement("i");s.className="spark";Object.assign(s.style,{left:Math.random()*95+"%",top:Math.random()*95+"%",animationDelay:(Math.random()*2.4)+"s"});rc.appendChild(s)}
+ document.querySelectorAll(".rcard").forEach(rc=>{for(let i=0;i<16;i++){const s=document.createElement("i");s.className="spark";Object.assign(s.style,{left:Math.random()*95+"%",top:Math.random()*95+"%",animationDelay:(Math.random()*2.4)+"s"});rc.appendChild(s)}});
  $("#map").onclick=()=>window.open(MAPS,"_blank");
  const toast=m=>{const t=$("#toast");t.textContent=m;t.classList.add("on");setTimeout(()=>t.classList.remove("on"),1800)};
  $("#copyBtn").onclick=async()=>{try{await navigator.clipboard.writeText(ADDRESS)}catch(e){const ta=document.createElement("textarea");ta.value=ADDRESS;document.body.appendChild(ta);ta.select();document.execCommand("copy");ta.remove()}toast("Address copied")};
