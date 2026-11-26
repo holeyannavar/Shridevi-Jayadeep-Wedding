@@ -237,10 +237,10 @@ section{position:relative;padding:70px 22px;text-align:center}
    <div class="medal"><svg><use href="#ganesh"/></svg></div>
    <div class="small t1 rv">Together with their families</div>
    <div class="name" id="bride"></div>
-   <div class="parent t2 rv">Daughter of Smt Suvarna Shri Basavaraj Holeyannavar</div>
+   <div class="parent t2 rv">Daughter of Smt. Suvarna & Shri Basavaraj Holeyannavar</div>
    <div class="amp t3 rv">&amp;</div>
    <div class="name" id="groom"></div>
-   <div class="parent t4 rv">Son of Smt Sunita Late Shri Payagouda Patil</div>
+   <div class="parent t4 rv">Son of Smt. Sunita & Late Shri Payagouda Patil</div>
    <div class="invite t5 rv">request the honour of your presence as they begin their journey together</div>
    <svg class="downArrow" viewBox="0 0 24 24" fill="none" stroke="#6e1f2f" stroke-width="1.6"><path d="M6 9l6 6 6-6"/><path d="M6 4l6 6 6-6" opacity=".4"/></svg>
   </div>
@@ -288,7 +288,7 @@ section{position:relative;padding:70px 22px;text-align:center}
    <div class="eyebrow">Sunday · 13 December 2026</div>
    <h2 class="gold-text">Wedding Reception</h2>
    <svg width="120" height="14"><use href="#flourish"/></svg>
-   <p style="margin-top:14px">Blessings, Photos &amp; Lunch  <br>12:00 PM onwards<br>Hebsur Bhavan, Hubballi<br><span style="opacity:.8">Dress code: Festive · IndoWestern &amp; Traditional</span></p>
+   <p style="margin-top:14px">Blessings, Photos &amp; Lunch<br>12:00 PM onwards<br>Hebsur Bhavan, Hubballi<br><span style="opacity:.8">Dress code: Festive · Dress code: Indo-western or traditional</span></p>
   </div>
  </section>
 
@@ -323,7 +323,7 @@ section{position:relative;padding:70px 22px;text-align:center}
   <h2 class="rv">We can't wait to<br>celebrate with you</h2>
   <svg class="flour rv" style="margin-top:16px"><use href="#flourish"/></svg>
   <div class="from rv">Invitation from</div>
-  <div class="fam rv">the Holeyannavar &amp; Patil families</div>
+  <div class="fam rv">The Holeyannavar &amp; Patil families</div>
  </section>
 </main>
 
@@ -515,8 +515,8 @@ function countdown(){
   const p=n=>String(n).padStart(2,"0");el.innerHTML=`<b>${d}</b>days<span class="sep">·</span><b>${p(h)}</b>hrs<span class="sep">·</span><b>${p(m)}</b>min<span class="sep">·</span><b>${p(s)}</b>sec`};
  f();setInterval(f,1000);
  $("#calBtn").onclick=()=>{
-  const ics=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//JS Wedding//EN","BEGIN:VEVENT","UID:shridevi-jayadeep-20261213","DTSTAMP:20261125T000000Z","DTSTART:20261213T070000Z","DTEND:20261213T110000Z","SUMMARY:Wedding of Shridevi & Jayadeep","LOCATION:"+ADDRESS.replace(/,/g,"\\,"),"DESCRIPTION:Weddings at 12:30 PM. Directions: "+MAPS,"END:VEVENT","END:VCALENDAR"].join("\r\n");
-  if(/android/i.test(navigator.userAgent)){window.open("https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent("Wedding of Shridevi & Jayadeep")+"&dates=20261213T070000Z/20261213T110000Z&location="+encodeURIComponent(ADDRESS)+"&details="+encodeURIComponent("Weddings at 12:30 PM. "+MAPS),"_blank");return}
+  const ics=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//JS Wedding//EN","BEGIN:VEVENT","UID:shridevi-jayadeep-20261213","DTSTAMP:20261125T000000Z","DTSTART:20261213T070000Z","DTEND:20261213T110000Z","SUMMARY:Wedding of Shridevi & Jayadeep","LOCATION:"+ADDRESS.replace(/,/g,"\\,"),"DESCRIPTION:Wedding at 12:19 PM. Directions: "+MAPS,"END:VEVENT","END:VCALENDAR"].join("\r\n");
+  if(/android/i.test(navigator.userAgent)){window.open("https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent("Wedding of Shridevi & Jayadeep")+"&dates=20261213T070000Z/20261213T110000Z&location="+encodeURIComponent(ADDRESS)+"&details="+encodeURIComponent("Wedding at 12:19 PM. "+MAPS),"_blank");return}
   const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([ics],{type:"text/calendar"}));a.download="Shridevi-Jayadeep-Wedding.ics";document.body.appendChild(a);a.click();a.remove()};
 }
 
